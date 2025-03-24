@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Miguel Angel Villagrasa Ballester</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,156 +13,71 @@
             color: #333;
             background-color: #f9f9f9;
         }
-
         header {
             background-color: #2c3e50;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #fff;
-        }
-
-        header p {
-            margin: 0.5rem 0;
-            font-size: 1.2rem;
-            color: #ecf0f1;
-        }
-
         .container {
             width: 80%;
             margin: 0 auto;
             padding: 2rem 0;
         }
-
         h2 {
             text-align: center;
             font-size: 2rem;
             color: #2980b9;
             margin-bottom: 1rem;
         }
-
         .skills-list {
             list-style-type: none;
             padding: 0;
             text-align: center;
         }
-
         .skills-list li {
             font-size: 1.1rem;
             margin: 0.5rem 0;
             color: #34495e;
         }
-
         .video-container {
-            margin: 0 auto;
             text-align: center;
             margin-bottom: 2rem;
         }
-
         .video-title {
             font-size: 1.7rem;
             margin-bottom: 1rem;
             font-weight: bold;
-            color: #2c3e50; 
+            color: #2c3e50;
         }
-
-        video {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-        }
-
         .video-description {
             font-size: 1rem;
             margin-top: 1rem;
             color: #2c3e50;
-            text-align: center; /* Centrar el texto descriptivo */
+            text-align: center;
         }
-
+        .swiper {
+            width: 100%;
+            height: 400px;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;
+        }
         footer {
             background-color: #2c3e50;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
-        }
-
-        footer p {
-            margin: 0;
-            color: #ecf0f1;
-            margin-bottom: 0.5rem;
-        }
-
-        footer a {
-            color: #4398dd;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #99caeb;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            .skills-list li {
-                font-size: 1rem;
-            }
-
-            .video-title {
-                font-size: 1.5rem;
-            }
-
-            .video-description {
-                font-size: 1rem;
-                margin-top: 0.5rem;
-                padding: 0; /* Elimina el espaciado interno en móviles */
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            header p {
-                font-size: 0.9rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            .skills-list li {
-                font-size: 0.9rem;
-            }
-
-            .video-title {
-                font-size: 1.2rem;
-            }
-
-            .video-description {
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -172,6 +88,7 @@
             <p>Experto en Diseño Web, Marketing y Desarrollo de Proyectos Tecnológicos</p>
         </div>
     </header>
+    
     <section>
         <div class="container">
             <h2>Habilidades</h2>
@@ -186,9 +103,10 @@
             </ul>
         </div>
     </section>
-    <h2>Últimos Proyectos</h2>
+    
     <section>
         <div class="container">
+            <h2>Últimos Proyectos</h2>
             <div class="video-container">
                 <div class="video-title">Social Party App</div>
                 <video class="responsive-video" autoplay loop muted playsinline>
@@ -198,44 +116,46 @@
                     Tu navegador no soporta el elemento de video.
                 </video>
                 <p class="video-description">
-                    <strong>Social Party App</strong> es un proyecto que lideré y con el que llegué a formar un equipo de trabajo. Este proyecto fue seleccionado por el Centro Europeo de Empresas Innovadoras (CEEI) en el marco de las ODS (Objetivos de Desarrollo Sostenible) como una herramienta para la mejora social. La aplicación ofrece funcionalidades avanzadas para salvaguarda de los usuarios, incluyendo botones de emergencia con contacto directo a números como el 016 contra el maltrato, 112... Fue diseñada para optimizar la seguridad y facilitar la gestión de eventos culturales, proporcionando una plataforma integral y segura para los usuarios.
-                </p>
+                    <strong>Social Party App<strong>Social Party App</strong> es un proyecto que lideré y con el que llegué a formar un equipo de trabajo. Este proyecto fue seleccionado por el Centro Europeo de Empresas Innovadoras (CEEI) en el marco de las ODS (Objetivos de Desarrollo Sostenible) como una herramienta para la mejora social. La aplicación ofrece funcionalidades avanzadas para salvaguarda de los usuarios, incluyendo botones de emergencia con contacto directo a números como el 016 contra el maltrato, 112... Fue diseñada para optimizar la seguridad y facilitar la gestión de eventos culturales, proporcionando una plataforma integral y segura para los usuarios.  </p>
             </div>
-            <div class="video-container">
-                <div class="video-title">Te Quiero Mil Web</div>
-                <video class="responsive-video" autoplay loop muted playsinline>
-                    <source src="te-quiero-mil-web.mp4" type="video/mp4">
-                    <source src="te-quiero-mil-web.webm" type="video/webm">
-                    <source src="te-quiero-mil-web.ogv" type="video/ogg">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-                <p class="video-description">
-                    <strong>Te Quiero Mil Web</strong> es un sitio web desarrollado como parte de una campaña creativa. En este proyecto, apliqué mis conocimientos en desarrollo web para implementar diversas funcionalidades, incluyendo la integración de una API de pasarela de pagos para el eCommerce. El sitio web se diseñó para ser visualmente atractivo y ofrecer una experiencia de usuario fluida y efectiva, aprovechando los aprendizajes adquiridos en el campo del diseño y desarrollo web para lograr un impacto positivo en la campaña.
-                </p>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="https://gimnascronos.com/" target="_blank"><img src="img1.jpg" alt="Gimnas Cronos"></a></div>
+                    <div class="swiper-slide"><a href="https://hcoposiciones.com/" target="_blank"><img src="img2.jpg" alt="HC Oposiciones"></a></div>
+                    <div class="swiper-slide"><a href="https://awnilevents.com/" target="_blank"><img src="img3.jpg" alt="Awnil Events"></a></div>
+                    <div class="swiper-slide"><a href="https://metalcris-john.es/" target="_blank"><img src="img4.jpg" alt="Metalcris John"></a></div>
+                    <div class="swiper-slide"><a href="https://pita-baby.com/" target="_blank"><img src="img5.jpg" alt="Pita Baby"></a></div>
+                    <div class="swiper-slide"><a href="https://instalriego.es/" target="_blank"><img src="img6.jpg" alt="Instalriego"></a></div>
+                    <div class="swiper-slide"><a href="https://ibertop.com/" target="_blank"><img src="img7.jpg" alt="Ibertop"></a></div>
+                    <div class="swiper-slide"><a href="https://montajesmueblesvalencia.com/" target="_blank"><img src="img8.jpg" alt="Montajes Muebles Valencia"></a></div>
+                    <div class="swiper-slide"><a href="https://giawelding.com/" target="_blank"><img src="img9.jpg" alt="GIA Welding"></a></div>
+                    <div class="swiper-slide"><a href="https://climatizacionesoliver.com/" target="_blank"><img src="img10.jpg" alt="Climatización Oliver"></a></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="container">
             <p>Correo Electrónico: <a href="mailto:miguee90@gmail.com">miguee90@gmail.com</a></p>
             <p>Teléfono: <a href="tel:+34652184012">+34 652 184 012</a></p>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('video.responsive-video');
-            
-            videos.forEach(video => {
-                if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|Windows Phone)/)) {
-                    video.addEventListener('loadeddata', () => {
-                        if (video.paused) {
-                            video.play().catch(error => {
-                                console.error('Error al intentar reproducir el video:', error);
-                            });
-                        }
-                    });
-                }
-            });
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
 </body>
